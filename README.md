@@ -58,6 +58,28 @@ The system uses an STM32F103C8T6 (Blue Pill) microcontroller to read sensor data
 | 📁 **Python/** | Contains the desktop-side software. |
 | ├── 🐍 `dashboard.py`| The main GUI script for visualizing ADAS data in real-time. |
 
+## 📸 Interface & Simulation Demo
+
+### 🛠️ 1. Hardware Simulation Layer (PICSimLab)
+The core embedded system simulates an **STM32 Blue Pill** microcontroller interacting with multiple peripheral modules in real-time.
+
+<img src="assets/picsimlab.png" alt="PICSimLab Hardware Layout" width="100%">
+
+* **Inputs & Controls:** Sliders simulate Accelerator (ACC), Brake (BRK), State of Charge (SOC), and Motor Temperature (MOT).
+* **Sensors:** 3x HC-SR04 ultrasonic distance sensor modules track clearance mapping (Left, Center, Right).
+* **Output Stream:** Raw telemetry logs string-formatted and transmitted live via the Virtual Terminal (VTerm) over a `115200` baud UART bus.
+
+---
+
+### 🖥️ 2. Telemetry Graphical User Interface (Python Dashboard)
+The high-fidelity desktop UI receives the serial packets, parses the incoming variables, and plots system stability.
+
+<img src="assets/dashboard.png" alt="Python Telemetry UI" width="100%">
+
+* **Dynamic Gauges:** Tracks instantaneous velocity (88 km/h), state of charge (79.2%), and thermal performance.
+* **ADAS Bird-Eye Module:** Implements spatial mapping, updating the physical position of detected hazards alongside real-time **Time-To-Collision (TTC)** metrics.
+* **Historical Trends:** A rolling Matplotlib line chart captures transient speed changes across runtime intervals.
+
 ## 🎥 Demo Video & Architecture
 
 [![EV ADAS Dashboard Demo](https://img.youtube.com/vi/nI4DvmGFNV0/maxresdefault.jpg)](https://youtu.be/nI4DvmGFNV0)
