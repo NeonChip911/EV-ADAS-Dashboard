@@ -62,15 +62,3 @@ The system uses an STM32F103C8T6 (Blue Pill) microcontroller to read sensor data
 
 [![EV ADAS Dashboard Demo](https://img.youtube.com/vi/nI4DvmGFNV0/maxresdefault.jpg)](https://youtu.be/nI4DvmGFNV0)
 
-## 🚦 How It Works
-
-```mermaid
-graph LR
-    A[Sensors & ADC] -->|Distance, Accel, Brake| B(STM32 Processing)
-    B -->|Dynamics & State Machine| C{Fault Manager}
-    C -->|Clear / Fault State| D[UART 115200]
-    D --> E((Python Dashboard))
-    
-    style B fill:#00b4d8,stroke:#000,color:#fff
-    style E fill:#2ecc71,stroke:#000,color:#fff
-
