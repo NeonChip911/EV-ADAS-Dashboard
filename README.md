@@ -56,7 +56,7 @@ The system uses an STM32F103C8T6 (Blue Pill) microcontroller to read sensor data
 | 📄 `fault.c/.h` | Error handling, system diagnostics, and fail-safe triggers. |
 | 📄 `uart_shell.c/.h` | Serial communication setup to talk to the dashboard. |
 | 📁 **Python/** | Contains the desktop-side software. |
-| ├── 🐍 `dashboard.py`| The main GUI script for visualizing ADAS data in real-time. |
+| ├── 🐍 `ev_dashboard.py`| The main GUI script for visualizing ADAS data in real-time. |
 
 ## 🎥 Demo Video & Architecture
 
