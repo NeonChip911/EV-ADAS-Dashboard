@@ -83,3 +83,16 @@ The high-fidelity desktop UI receives the serial packets, parses the incoming va
 * **Dynamic Gauges:** Tracks instantaneous velocity (88 km/h), state of charge (79.2%), and thermal performance.
 * **ADAS Bird-Eye Module:** Implements spatial mapping, updating the physical position of detected hazards alongside real-time **Time-To-Collision (TTC)** metrics.
 * **Historical Trends:** A rolling Matplotlib line chart captures transient speed changes across runtime intervals.
+
+---
+
+### 📟 3. UART Debug Console (Tera Term)
+A serial terminal interface provides low-level, bidirectional communication with the microcontroller for real-time debugging, parameter overriding, and diagnostic polling.
+
+<img src="assets/UART_Commands_1.png" alt="UART CLI Commands" width="100%">
+<br>
+<img src="assets/UART_Commands_2.png" alt="UART Status Output" width="100%">
+
+* **Interactive Command Line:** A built-in `help` menu shows commands allow user to manually inject states and test edge cases (e.g., `mode eco`, `speed set 80`, `soc set 100`, `fault inject`).
+* **Live Telemetry Stream:** The console continuously outputs raw, string-formatted telemetry tracking speed (SPD), state of charge (SOC), torque (TRQ), and ultrasonic clearances (F, L, R) alongside calculated Time-To-Collision (TTC).
+* **System Polling & Diagnostics:** Executing the `status` command generates EV ADAS ecosystem, instantly flagging active alarms and critical collision faults (e.g., `[FAULT_COL]`).
