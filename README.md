@@ -76,7 +76,7 @@ The core embedded system simulates an **STM32 Blue Pill** microcontroller intera
 ---
 
 ### 🖥️ 2. Telemetry Graphical User Interface (Python Dashboard)
-The high-fidelity desktop UI receives the serial packets, parses the incoming variables, and plots system stability.
+The desktop UI receives the serial packets, parses the incoming variables, and plots system stability.
 
 <img src="assets/dashboard.png" alt="Python Telemetry UI" width="100%">
 
