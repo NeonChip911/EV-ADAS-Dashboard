@@ -60,7 +60,7 @@ The system uses an STM32F103C8T6 (Blue Pill) microcontroller to read sensor data
 
 ## 🎥 Demo Video & Architecture
 
-[![EV ADAS Dashboard Demo](https://img.youtube.com/vi/nI4DvmGFNV0/maxresdefault.jpg)](https://youtu.be/nI4DvmGFNV0)
+[![EV ADAS Dashboard Demo]([https://img.youtube.com/vi/nI4DvmGFNV0/maxresdefault.jpg)](https://youtu.be/nI4DvmGFNV0](https://www.youtube.com/watch?v=nI4DvmGFNV0&t=43m07s))
 
 ## 📸 Interface & Simulation Demo
 
